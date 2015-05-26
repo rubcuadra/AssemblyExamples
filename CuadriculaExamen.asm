@@ -1,12 +1,11 @@
-
- ;Imprime lo que este en Al\
+ ;Imprime lo que este en Al 
        mov Ah, 02h
        Mov Dl, row
        Mov Dh, column
-       INT 10h ;Apunta a rows y columns\
+       INT 10h ;Apunta a rows y columns 
        
        mov Ah,09
-       INT 10h ;Imprimir donde esta apuntando\
+       INT 10h ;Imprimir donde esta apuntando 
 Print endm
 org 100h   
 mov Bh, 00h
@@ -17,7 +16,7 @@ mov [0301h], 04h
 
 mov Ah, 00h
 mov Al, 03h
-INT 10h         ;Saca Pantalla\
+INT 10h         ;Saca Pantalla 
  
 mov Al,'*' 
 mov Cx,0Ah 
@@ -37,7 +36,7 @@ JNZ HORIZONTAL
     mov [0301h],04h      
     mov Cx, 02h  
 VERTICAL: 
-    Print [0301h],[0300h] ;(1,X) \
+    Print [0301h],[0300h] ;(1,X)  
     INC [0300h]
     CMP [0300h], 019h 
 JNZ VERTICAL 
