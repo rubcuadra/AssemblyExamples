@@ -63,7 +63,8 @@ JNZ READ
 ReadLine ENDP 
 Wait PROC 
     MOV AH, 86H     
-    MOV DX,  cf2  cb3 8D80H cf0  cb1     MOV CX, 05Bh 
+    MOV DX, 8D80H    
+    MOV CX, 05Bh 
     INT 15H 
     RET 
 Wait ENDP 
@@ -94,4 +95,4 @@ Imprimir4 PROC
     PrintRow 120EH, 1207H, 0AH, 03H ,01h 
     PrintRow 1206H, 11FFH, 0BH, 03H ,01h 
     RET 
-Imprimir4 ENDP}
+Imprimir4 ENDP

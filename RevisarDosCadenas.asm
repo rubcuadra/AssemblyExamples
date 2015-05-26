@@ -82,4 +82,4 @@ Dif PROC
     PrintArray DIFERENTES,0 
     JMP FINDEPROGRAMA 
     RET 
-Dif ENDP  }
+Dif ENDP  
